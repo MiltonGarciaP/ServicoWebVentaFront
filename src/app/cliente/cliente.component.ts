@@ -12,10 +12,13 @@ import { Response } from '../models/response';
 
 export class ClienteComponent implements OnInit {
 
-  lst: any[] = [];
+  public lst!: any[];
+  public columnas: string[] = ['id' , 'nombre']
+
 constructor (
   private apiCliente: ApiclienteService
 ){ 
+
 }
   
   
@@ -26,9 +29,8 @@ ngOnInit(): void {
 getClientes()
 {
   
-  this.apiCliente.getclientes().subscribe( response => {
-    
-    this.lst = response.data;
+  this.apiCliente.getclientes().subscribe( Response => {
+    this.lst = Response.data;
     
   });
 }
