@@ -1,2 +1,17 @@
 
-<router-outlet></router-outlet>
+<mat-drawer-container>
+
+<mat-drawer #drawer mode="side">
+<a [routerLink]="['/home']">inicio</a><br>
+<a [routerLink]="['/cliente']">Cliente</a>
+</mat-drawer>
+
+<div>
+    <button (click)="drawer.toggle();">Mostrar</button>
+    <router-outlet></router-outlet>
+</div>
+
+</mat-drawer-container>
+
+
+

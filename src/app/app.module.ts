@@ -4,8 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSidenavModule} from '@angular/material/sidenav'
 import { HomeComponent } from './home/home.component';
 import { ClienteComponent } from './cliente/cliente.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -16,7 +18,10 @@ import { ClienteComponent } from './cliente/cliente.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSidenavModule,
+
+   HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
